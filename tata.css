@@ -1,0 +1,806 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/* nav section styles */
+.blue {
+  z-index: 34;
+  padding-right: 40px;
+  background-color: #0a0a5f;
+  display: flex;
+  height: 35px;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+.blue > a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1;
+  padding: 0px 10px;
+  font-weight: 450;
+}
+.black {
+  z-index: 34;
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
+  box-shadow: 0px 5px 9px 5px rgba(0, 0, 0, 0.8);
+  padding: 0px 40px;
+  width: 100%;
+  position: fixed;
+}
+.bar i {
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+.bar i:hover {
+  color: #042352;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 7px;
+  font-size: 13px;
+  transition: all 0.3s ease-out;
+}
+.menu a:hover {
+  color: #5151df;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 250px;
+  z-index: 1;
+  background-color: #e1e1e1;
+  border-radius: 5px;
+  border-bottom: 1px solid white;
+}
+.dropdown-content a {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  padding: 8px 12px;
+  margin: 8px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #fff;
+  transition: all 1s ease-out;
+}
+.dropdown-content a:hover {
+  color: #629ef7;
+  border-bottom: 1px solid #629ef7;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.link {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-content {
+  background-image: url("https://www.tatamotors.com/wp-content/themes/TataMotors/images/TM_Home_Desktop2.webp");
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.arrow-left,
+.arrow-right {
+  cursor: pointer;
+}
+.nav-text > h1 {
+  font-size: 50px;
+}
+.nav-text > p {
+  font-size: 20px;
+  border-bottom: 1.5px solid white;
+  display: inline;
+}
+/* end of the nav section */
+/* container-one styles */
+.container-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0px 15px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 1));
+  height: auto;
+  box-shadow: 0px 0px 90px 100px black;
+}
+.card {
+  position: relative;
+  border-radius: 10px;
+  height: 400px;
+  width: 24%;
+  color: white;
+  padding: 50px 10px;
+  display: flex;
+  align-items: end;
+  margin-bottom: 10%;
+  transition: all 0.2s ease-out;
+  cursor: grab;
+}
+.card:hover {
+  transform: translateY(-20px);
+  background-image: linear-gradient(rgba(0, 0, 255, 0) 40%, rgba(0, 0, 255, 1));
+}
+.card > div > p {
+  font-size: 20px;
+  font-weight: 600;
+  isolation: isolate;
+}
+.card > div > a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1.2px solid #fff;
+  font-weight: 500;
+  transition: all 0.5s ease-out;
+  isolation: isolate;
+}
+.card > div > a:hover {
+  color: #042352;
+  border-bottom: 2px solid #011533;
+}
+.card-one::before {
+  content: "";
+  background-image: url("https://www.tatamotors.com/wp-content/themes/TataMotors/images/fold2-1.webp");
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-position: center;
+}
+.card-two::before {
+  content: "";
+  background-image: url("https://www.tatamotors.com/wp-content/themes/TataMotors/images/fold2-2.webp");
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-position: center;
+}
+.card-three::before {
+  content: "";
+  background-image: url("https://www.tatamotors.com/wp-content/themes/TataMotors/images/fold2-3.webp");
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-position: center;
+}
+.card-four::before {
+  content: "";
+  background-image: url("https://www.tatamotors.com/wp-content/themes/TataMotors/images/fold2-4.webp");
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-position: center;
+}
+/* end of container-one styles and begining of container-two */
+.container-two-text {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container-two {
+  background-color: #f5f9ff;
+  height: auto;
+  width: 100%;
+}
+.text-two {
+  width: 50%;
+}
+.text-one {
+  width: 20%;
+  position: relative;
+  top: 100px;
+}
+.about {
+  margin-top: 40px;
+}
+.about > p {
+  color: #919191;
+  line-height: 1.5;
+}
+.about > h1,
+.about > h3 {
+  font-weight: 400;
+}
+.about > a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1.4px solid black;
+  transition: all 0.5s ease-out;
+}
+.container-four-text > a:hover,
+.about > a:hover {
+  color: #629ef7;
+  border-bottom: 2.5px solid #629ef7;
+}
+.truck {
+  background-image: url("https://www.tatamotors.com/wp-content/themes/TataMotors/images/Dots_businesses.png");
+  width: 100%;
+  height: 700px;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-truck1 img {
+  width: 800px;
+  position: relative;
+  right: 32%;
+}
+.sub-truck img {
+  position: relative;
+  right: 63%;
+  width: 400px;
+}
+.sub-truck2 img {
+  width: 800px;
+  position: relative;
+  right: 30%;
+}
+/* end of container-two */
+.container-three {
+  position: relative;
+  height: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #080d15;
+  color: #fff;
+}
+.container-three::before {
+  content: "";
+  background-image: url("https://www.tatamotors.com/wp-content/themes/TataMotors/images/legacy-bg1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+  background-position: center;
+  width: 100%;
+}
+.container-three-text,
+.arrow {
+  color: #fff;
+  isolation: isolate;
+}
+/* end of container-three */
+.container-four {
+  background-color: #f5f9ff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-business {
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+.tata-jeep img {
+  width: 700px;
+}
+.container-four-text {
+  width: 30%;
+}
+.container-four-text > h3 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.container-four-text > h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.container-four-text > h1 {
+  color: #307fe2;
+  font-weight: 600;
+  font-size: 50px;
+}
+.container-four-text > a {
+  color: #0a0a5f;
+  font-size: 24px;
+  text-decoration: none;
+  border-bottom: 2px solid #0a0a5f;
+}
+.vehicles {
+  padding-bottom: 5px;
+  border-bottom: 20px solid #c9dbe6;
+}
+.vehicles span > a {
+  padding-inline: 80px;
+  text-decoration: none;
+  color: black;
+}
+.vehicles span > .active {
+  border-bottom: 20px solid #0a0a5f;
+  padding-bottom: 5px;
+}
+/* beginning of container-five */
+.container-five {
+  background-image: url("https://www.tatamotors.com/wp-content/themes/TataMotors/images/IR_BG_image_Desktop.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 850px;
+}
+
+.container-five-text {
+  padding-top: 30px;
+  color: white;
+  text-align: center;
+}
+.container-five-text a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 1px solid white;
+  transition: all 0.4s ease-in;
+}
+.container-five-text a:hover {
+  color: #629ef7;
+  border-bottom: 2px solid #629ef7;
+}
+.container-five-text h4 {
+  font-size: 17px;
+  font-weight: 400;
+}
+.container-five-text h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+.card-v {
+  width: 50%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.five-card {
+  height: 320px;
+  width: 250px;
+  background-color: #c9dbe6;
+  border-radius: 30px;
+  margin-inline: 20px;
+}
+.five-card > p {
+  background-color: #0d6efd;
+  padding-top: 10px;
+  height: 80px;
+  margin-top: 15px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.five-card > img {
+  padding-top: 30px;
+}
+.five-card:hover p {
+  background-color: black;
+  transition: all 0.4s ease-out;
+}
+.big-card {
+  background-color: #e1e1e1;
+  width: 500px;
+  height: 400px;
+  border-radius: 30px;
+}
+.tata-card {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.big-card-text {
+  margin: 30px;
+}
+.big-card-text button {
+  width: 100px;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 40px;
+  border: 0.001px solid rgb(199, 196, 196);
+}
+.big-card-text button .two {
+  background-color: #0f24ab;
+  padding-block: 11px;
+  padding-inline: 13px;
+  color: white;
+  border-radius: 17px;
+}
+.big-card-text h1 {
+  color: #0d6efd;
+  font-size: 39px;
+}
+.big-card-text p {
+  font-size: 20px;
+}
+.big-card-text h5 {
+  font-weight: 400;
+  color: #6a6a6a;
+  font-size: 14px;
+  padding-top: 5px;
+}
+.big-card-text h4 {
+  font-weight: 600;
+  font-size: 18px;
+}
+/* beginning of container-six */
+.container-six,
+.container-seven {
+  width: 100%;
+  background-color: #fff;
+}
+.sub-container-six {
+  margin: 50px;
+  border-radius: 40px;
+  position: relative;
+  height: 600px;
+}
+.sub-container-six::before {
+  content: "";
+  background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0) 1%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("	https://www.tatamotors.com/wp-content/themes/TataMotors/images/Sustainability-banner-new-home.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background-position: center;
+  width: 100%;
+}
+.container-six-text,
+.container-seven-text {
+  padding-block: 80px;
+  padding-inline: 80px;
+  color: #fff;
+  isolation: isolate;
+}
+.container-six-text button,
+.btn {
+  padding: 19px;
+  width: 150px;
+  background-color: #0a0a5f;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.container-six-text button:hover,
+.btn:hover {
+  background-color: #3986fa;
+}
+.container-six-text h1,
+.container-seven-text h1 {
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.container-six-text p {
+  line-height: 1.4;
+  font-size: 18px;
+}
+.container-six-text h4,
+.container-seven-text h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* beginning of container-seven */
+.sub-container-seven {
+  margin: 50px;
+  border-radius: 40px;
+  position: relative;
+  height: 600px;
+}
+.sub-container-seven::before {
+  content: "";
+  background-image: linear-gradient(
+      to top,
+      rgb(0, 0, 0) 1%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("	https://www.tatamotors.com/wp-content/themes/TataMotors/images/home-careers-banner.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background-position: center;
+  width: 100%;
+}
+.btn1 {
+  padding: 19px;
+  width: 220px;
+  background-color: #0a0a5f;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.btn1:hover {
+  background-color: #3986fa;
+}
+/* beginning of footer */
+footer {
+  background-color: #0a0a5f;
+  height: auto;
+}
+.footer-list {
+  padding-inline: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 40px;
+}
+.list {
+  width: 200px;
+  line-height: 1.7;
+}
+.list ul {
+  list-style-type: none;
+}
+.head {
+  padding-block: 10px;
+  color: #307fe2;
+  border-bottom: 0.1px solid #307fe2;
+}
+.list ul li > a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  font-size: 15px;
+  transition: all 0.4s ease;
+}
+.list ul li > a:hover {
+  color: #307fe2;
+}
+.icon .fa-brands {
+  margin-top: 5px;
+  color: #fff;
+  padding-block: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.icon .fa-brands:hover {
+  color: #307fe2;
+}
+.icon ul,
+.form ul {
+  list-style-type: none;
+}
+.icon ul .foot,
+.form ul .foot {
+  color: #0d6efd;
+  border-bottom: 0.1px solid #0d6efd;
+  padding-bottom: 10px;
+}
+.icon a {
+  color: #fff;
+  text-decoration: none;
+}
+.icon-li {
+  width: 50%;
+}
+.form-icon {
+  padding-inline: 80px;
+  padding-block: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.form p {
+  color: #fff;
+}
+.form-input {
+  margin-block: 20px;
+  width: 420px;
+  height: 50px;
+  background-color: #fff;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding-block: 20px;
+  padding-left: 20px;
+}
+.form-input > i {
+  font-size: 20px;
+  color: grey;
+}
+.form-input > input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+.form-input > button {
+  background-color: #0d6efd;
+  padding: 17px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  margin-left: 5px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+/* media query */
+
+@media (max-width: 900px) {
+  .menu,
+  .logo2,
+  .vehicles,
+  .big-card,
+  .btn1,
+  .walk {
+    display: none;
+  }
+  .logo img {
+    width: 150px;
+  }
+  .nav-text h1,
+  .container-three h1,
+  .container-four-text > h1,
+  .container-five-text h1,
+  .container-six-text h1,
+  .container-seven-text {
+    font-size: 30px;
+  }
+  .nav-text p,
+  .container-three h3,
+  .container-four-text h3 {
+    font-size: 20px;
+  }
+  .sub-container-six{
+    height: auto;
+  }
+  .container-six-text > p{
+    font-size: 15px;
+  }
+  .container-six-text button, .btn{
+    font-size: 14px;
+    padding: 10px;
+    width: 90px;
+  }
+  .container-one {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    place-items: center;
+  }
+  .card {
+    width: 60%;
+  }
+  .text-one,
+  .text-three,
+  .sub-truck1,
+  .sub-truck2 {
+    display: none;
+  }
+  .truck {
+    justify-content: center;
+    height: auto;
+  }
+  .sub-truck img {
+    right: 0%;
+    width: 250px;
+  }
+  .our-business {
+    flex-direction: column;
+    height: auto;
+  }
+  .container-four-text {
+    width: 70%;
+  }
+  .tata-jeep {
+    margin-block: 100px;
+  }
+  .tata-jeep img {
+    width: 380px;
+  }
+  .sub-container-seven {
+    height: auto;
+  }
+  .container-seven-text {
+    width: 70%;
+  }
+  .list {
+    font-size: 18px;
+  }
+  .head,
+  .foot {
+    font-size: 15px;
+  }
+  .form-icon {
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 40px;
+  }
+  .form-input {
+    width: 190px;
+  }
+  .card-v{
+    height: auto;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .icon{
+    width: 100%;
+  }
+  .icon i{
+    font-size: 15px;
+  }
+  .form-input > input {
+    width: 10px;
+  }
+}
+@media (min-width: 901px) {
+    .menu {
+    display: none;
+  }
+  .walk{
+    display: none;
+  }
+}
+
+
+@media (min-width :1229px) {
+  .bar{
+    display: none;
+  }
+  .menu, .walk{
+    display: block;
+  }
+}
